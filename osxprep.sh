@@ -10,11 +10,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "------------------------------"
 echo "Updating OSX.  If this requires a restart, run the script again."
 # Install all available updates
-sudo softwareupdate -iva
+# sudo softwareupdate -iva
 # Install only recommended available updates
 #sudo softwareupdate -irv
 
 echo "------------------------------"
 echo "Installing Xcode Command Line Tools."
 # Install Xcode command line tools
+xcode-select --switch /Applications/Xcode-beta.app
 xcode-select --install
