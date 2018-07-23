@@ -85,7 +85,7 @@ function runSetup() {
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    runDots $@
+    runSetup $@
 fi;
 
-unset runDots;
+unset runSetup;
