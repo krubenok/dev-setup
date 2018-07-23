@@ -26,146 +26,68 @@ brew upgrade --all
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
-# Install some other useful utilities like `sponge`.
-brew install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
-# Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
-# Install Bash 4.
-brew install bash
+# Install zsh.
+brew install zsh
+
 brew tap homebrew/versions
-brew install bash-completion2
+brew tap caskroom/fonts
+brew tap caskroom/cask
+
 # We installed the new shell, now we have to activate it
 echo "Adding the newly installed shell to the list of allowed shells"
 # Prompts for password
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+sudo bash -c 'echo /usr/local/bin/zsh >> /etc/shells'
 # Change to the new shell, prompts for password
-chsh -s /usr/local/bin/bash
-
-# Install `wget` with IRI support.
-brew install wget --with-iri
-
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+chsh -s /usr/local/bin/zsh
 
 # Install Python
 brew install python
 brew install python3
 
-# Install ruby-build and rbenv
-brew install ruby-build
-brew install rbenv
-LINE='eval "$(rbenv init -)"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
-
-# Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
-brew install nmap
-brew install pngcheck
-brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install homebrew/x11/xpdf
-brew install xz
-
-# Install other useful binaries.
-brew install ack
-brew install dark-mode
-#brew install exiv2
+# Install other useful tools
 brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
-brew install hub
-brew install imagemagick --with-webp
-brew install lua
-brew install lynx
-brew install p7zip
-brew install pigz
-brew install pv
-brew install rename
-brew install rhino
-brew install speedtest_cli
-brew install ssh-copy-id
 brew install tree
-brew install webkit2png
-brew install zopfli
-brew install pkg-config libffi
-brew install pandoc
+brew install dockutil
+brew install git
+brew install mas
+brew install zsh
+brew install z
 
-# Lxml and Libxslt
-brew install libxml2
-brew install libxslt
-brew link libxml2 --force
-brew link libxslt --force
+# Casks
+brew cask install 1password-beta
+brew cask install aerial
+brew cask install affinity-designer-beta
+brew cask install affinity-photo-beta
+brew cask install alfred
+brew cask install emojify
+brew cask install figma
+brew cask install firefox
+brew cask install franz
+brew cask install geekbench
+brew cask install gfxcardstatus
+brew cask install github-beta
+brew cask install google-backup-and-sync
+brew cask install google-chrome
+brew cask install highsierramediakeyenabler
+brew cask install hyper
+brew cask install iina
+brew cask install intel-power-gadget
+brew cask install java
+brew cask install jetbrains-toolbox
+brew cask install notion
+brew cask install private-internet-access
+brew cask install setapp
+brew cask install sketch
+brew cask install visual-studio-code-insiders
+brew cask install vmware-fusion
+brew cask install webex-teams
 
-# Install Heroku
-brew install heroku-toolbelt
-heroku update
-
-# Core casks
-brew cask install --appdir="/Applications" alfred
-brew cask install --appdir="~/Applications" iterm2
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" xquartz
-
-# Development tool casks
-brew cask install --appdir="/Applications" sublime-text
-brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
-brew cask install --appdir="/Applications" vagrant
-brew cask install --appdir="/Applications" macdown
-
-# Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
-brew cask install --appdir="/Applications" evernote
-brew cask install --appdir="/Applications" 1password
-#brew cask install --appdir="/Applications" gimp
-#brew cask install --appdir="/Applications" inkscape
-
-#Remove comment to install LaTeX distribution MacTeX
-#brew cask install --appdir="/Applications" mactex
-
-# Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
+# Fonts 
+brew cask install font-fira-code
+brew cask install font-hind
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
