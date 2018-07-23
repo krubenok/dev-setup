@@ -52,7 +52,8 @@ brew install git-extras
 brew install tree
 brew install dockutil
 brew install git
-brew install mas
+# brew install mas
+# Commenting out mas because of Mojave beta
 brew install zsh
 brew install z
 
