@@ -80,7 +80,7 @@ brew cask install java
 brew cask install jetbrains-toolbox
 brew cask install notion
 brew cask install private-internet-access
-brew cask install setapp
+# brew cask install setapp
 brew cask install sketch
 brew cask install visual-studio-code-insiders
 brew cask install vmware-fusion
