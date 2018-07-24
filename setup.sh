@@ -55,6 +55,14 @@ function runSetup() {
             echo ""
             ./web.sh
         fi
+        if [ $ARG == "dock" ] || [ $ARG == "all" ]; then
+            # Run the web.sh Script
+            echo "------------------------------"
+            echo "Setting up dock configuration"
+            echo "------------------------------"
+            echo ""
+            ./dock.sh
+        fi
     done
 
     echo "------------------------------"
