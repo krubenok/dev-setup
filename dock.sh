@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo -v
+
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/App Store.app"
 dockutil --no-restart --add "/Applications/Safari.app"

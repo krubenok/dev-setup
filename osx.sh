@@ -407,6 +407,8 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Install oh my zsh                                                           #
 ###############################################################################
 
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
 #Install oh-my-zsh
 curl -L http://install.ohmyz.sh | sh
 
