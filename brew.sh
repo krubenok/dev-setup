@@ -37,6 +37,7 @@ brew install python
 brew install python3
 
 # Install other useful tools
+brew install wget
 brew install git
 brew install git-lfs
 brew install git-flow
