@@ -113,5 +113,4 @@ function code {
 
 # Enable a few aliases
 alias fucking="sudo"
-eval $(thefuck --alias)
 alias flushcache="sudo killall -HUP mDNSResponder"
