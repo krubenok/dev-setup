@@ -85,6 +85,8 @@ function runSetup() {
 
     rm -rf ~/.hyper.js
     ln -s ~/Repos/dotfiles/.hyper.js ~/.hyper.js
+
+    wget -O ~/oh-my-zsh/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
 }
 
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
