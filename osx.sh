@@ -415,6 +415,9 @@ curl -L http://install.ohmyz.sh | sh
 #Install syntax highlighting
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
+
+wget -O ~/.oh-my-zsh/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
