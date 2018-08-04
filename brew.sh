@@ -27,16 +27,8 @@ brew tap caskroom/fonts
 
 
 brew install zsh
-# We installed the new shell, now we have to activate it
-echo "Adding the newly installed shell to the list of allowed shells"
-# Prompts for password
-sudo bash -c 'echo /usr/local/bin/zsh >> /etc/shells'
-
-# Install Python
 brew install python
 brew install python3
-
-# Install other useful tools
 brew install wget
 brew install git
 brew install git-lfs
@@ -45,8 +37,7 @@ brew install git-extras
 brew install tree
 brew install dockutil
 brew install git
-# Commenting out mas because of Mojave beta
-# brew install mas
+brew install mas
 brew install z
 
 # Casks
