@@ -10,14 +10,14 @@ function runSetup() {
     # Run sections based on command line arguments
     for ARG in "$@"
     do
-        if [ $ARG == "osxprep" ] || [ $ARG == "all" ]; then
-            # Run the osxprep.sh Script
+        if [ $ARG == "macOSsetup" ] || [ $ARG == "all" ]; then
+            # Run the macOSsetup.sh Script
             echo ""
             echo "------------------------------"
             echo "Updating OSX and installing Xcode command line tools"
             echo "------------------------------"
             echo ""
-            ./osxprep.sh
+            ./macOSsetup.sh
         fi
         if [ $ARG == "brew" ] || [ $ARG == "all" ]; then
             # Run the brew.sh Script
@@ -32,8 +32,8 @@ function runSetup() {
             echo ""
             ./brew.sh
         fi
-        if [ $ARG == "osx" ] || [ $ARG == "all" ]; then
-            # Run the osx.sh Script
+        if [ $ARG == "macOS" ] || [ $ARG == "all" ]; then
+            # Run the macOS.sh Script
             # I strongly suggest you read through the commented osx.sh
             # source file and tweak any settings based on your personal
             # preferences. The script defaults are intended for you to
@@ -42,10 +42,10 @@ function runSetup() {
             # SSD section.
             echo ""
             echo "------------------------------"
-            echo "Setting sensible OSX defaults."
+            echo "Setting sensible macOS defaults."
             echo "------------------------------"
             echo ""
-            ./osx.sh
+            ./macOS.sh
         fi
         if [ $ARG == "web" ] || [ $ARG == "all" ]; then
             # Run the web.sh Script

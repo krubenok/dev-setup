@@ -15,7 +15,7 @@ echo "Updating OSX.  If this requires a restart, run the script again."
 #sudo softwareupdate -irv
 
 echo "------------------------------"
-echo "Installing Xcode Command Line Tools."
+echo "Switch to Xcode-beta.app Command Line Tools."
 # Install Xcode command line tools
 xcode-select --switch /Applications/Xcode-beta.app
 xcode-select --install
