@@ -87,6 +87,15 @@ function runSetup() {
     ln -s ~/Repos/dotfiles/.hyper.js ~/.hyper.js
 
     wget -O ~/oh-my-zsh/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
+
+    # VS Code Symlinks
+    rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+    rm ~/Library/Application\ Support/Code\ -\ Insiders/User/keybindings.json
+    rm ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
+
+    ln -s ~/Repos/dotfiles/VSCode/settings.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+    ln -s ~/Repos/dotfiles/VSCode/keybindings.json ~/Library/Application\ Support/Code\ -\ Insiders/User/keybindings.json
+    ln -s ~/Repos/dotfiles/VSCode/snippets ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
 }
 
 read -p "This script may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;

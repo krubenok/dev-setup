@@ -1,0 +1,24 @@
+{
+    "sync.gist": "95f07d15612b9f884adb0b03254115cd",
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastUpload": "",
+    "sync.lastDownload": "2018-07-21T18:53:05.043Z",
+    "sync.forceDownload": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "window.zoomLevel": 0,
+    "editor.multiCursorModifier": "ctrlCmd"
+}
