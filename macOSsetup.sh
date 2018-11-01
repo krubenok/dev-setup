@@ -17,5 +17,5 @@ echo "Updating OSX.  If this requires a restart, run the script again."
 echo "------------------------------"
 echo "Switch to Xcode-beta.app Command Line Tools."
 # Install Xcode command line tools
-xcode-select --switch /Applications/Xcode-beta.app
+xcode-select --switch /Applications/Xcode.app
 xcode-select --install

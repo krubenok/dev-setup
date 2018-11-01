@@ -86,7 +86,8 @@ function runSetup() {
     rm -rf ~/.hyper.js
     ln -s ~/Repos/dotfiles/.hyper.js ~/.hyper.js
 
-    wget -O ~/oh-my-zsh/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
+    mkdir $ZSH_CUSTOM/themes 
+    wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
 
     # VS Code Symlinks
     rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
