@@ -19,7 +19,7 @@ curl -L http://install.ohmyz.sh | sh
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 curl -sSL https://get.rvm.io | bash -s stable --ruby
-wget -O ~/oh-my-zsh/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme 
+wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
 
 rm -rf ~/.zshrc
 ln -s ~/Repos/dotfiles/.zshrc ~/.zshrc
@@ -38,5 +38,5 @@ ln -s ~/Repos/dotfiles/.aliases ~/.aliases
 rm -rf ~/.hyper.js
 ln -s ~/Repos/dotfiles/.hyper.js ~/.hyper.js
 
-rm -rf ~/.ssh
-ln -s /Volumes/GoogleDrive/My Drive/dotfiles/.ssh ~/.ssh
+rm -rf ~/.ssh 
+ln -s /Volumes/GoogleDrive/My\ Drive/dotfiles/.ssh ~/.ssh
