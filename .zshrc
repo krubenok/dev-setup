@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -9,7 +10,8 @@ export ZSH=/Users/krubenok/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
+ZSH_THEME="wedisagree"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -63,7 +65,6 @@ ZSH_THEME="spaceship"
 plugins=(
     git 
     brew
-    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -128,18 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-    if [[ -f .nvmrc && -r .nvmrc ]]; then
-        nvm use
-    elif [[ $(nvm version) != $(nvm version default)  ]]; then
-        echo "Reverting to nvm default version"
-        nvm use default
-    fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-  # Set Spaceship ZSH as a prompt
-  autoload -U promptinit; promptinit
-  prompt spaceship
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+# zprof 
