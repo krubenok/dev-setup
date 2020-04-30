@@ -1,0 +1,23 @@
+#!/bin/zsh
+# Run by Strap after installing Brewfile dependencies
+
+[ $(uname -s) = "Darwin" ] && export MACOS=1 && export UNIX=1
+[ $(uname -s) = "Linux" ] && export LINUX=1 && export UNIX=1
+uname -s | grep -q "_NT-" && export WINDOWS=1
+
+
+cd $(dirname $0)/..
+
+if [ "$SHELL" != "/bin/zsh" ]
+then
+  chsh -s /bin/zsh krubenok
+fi
+
+script/extract-onepassword-secrets
+script/node
+
+# if macOS, set a custom dock
+if [ $MACOS ]
+  then
+  script/dock
+  fi

@@ -1,8 +1,0 @@
-[user]
-	email = kyle@rubenok.ca
-	name = Kyle Rubenok
-[filter "lfs"]
-        required = true
-        clean = git-lfs clean -- %f
-        smudge = git-lfs smudge -- %f
-        process = git-lfs filter-process

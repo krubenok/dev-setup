@@ -1,0 +1,34 @@
+[user]
+	email = kyle@rubenok.ca
+	name = Kyle Rubenok
+	signingKey = CC4C6F1854CB772F98E7FA2280B00ABC885648A5
+[github]
+	user = krubenok
+[color]
+	ui = auto
+[commit]
+	# Show the diff as a comment in the commit message template.
+	verbose = true
+	# Sign commits with GPG
+	gpgsign = true
+[core]
+	# Exclude everything this file. Used for general exclusions.
+	excludesfile = ~/.gitignore
+	# Don't prompt for commit messages for merge commits.
+	mergeoptions = --no-edit
+	commitGraph = true
+[tag]
+	forceSignAnnotated = true
+[gpg]
+	program = /usr/local/bin/gpg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+	# Use the slower but better patience diff algorithm
+	algorithm = patience
+	# Use new diff algorithm to make e.g. function diffs look better.
+	compactionheuristic = true
+

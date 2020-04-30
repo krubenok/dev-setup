@@ -1,27 +1,16 @@
-# IntelliJ IDEA IDE
-.idea
-
-# Compiled Python files
-*.pyc
-
-# Folder view configuration files
+/ssh/id_*
+/ssh/id_rsa
+/ssh/*_rsa*
+/ssh/known_hosts
+/gnupg/*.d/
+/gnupg/*.db
+/gnupg/*.gpg
+/gnupg/*.kbx
+/gnupg/*.private.*
+/gnupg/.*
+bundle/cache
+secrets
+rbenv/*/
+Brewfile.lock.json
 .DS_Store
-Desktop.ini
-
-# Thumbnail cache files
-._*
-Thumbs.db
-
-# Files that might appear on external disks
-.Spotlight-V100
-.Trashes
-
-# Files that contain credentials or personal info
-.extra
-.boto
-.mrjob.conf
-.s3cfg
-.aws/
-
-# Repo scratch directory
-scratch/
+gnupg/pubring.kbx~
