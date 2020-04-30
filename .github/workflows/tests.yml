@@ -18,10 +18,3 @@ jobs:
 
     - name: Test script/setup
       run: bash script/setup
-
-    - name: Test bashrc
-      run: bash -c "source ~/.bashrc"
-
-    - name: Test zshrc
-      run: zsh -c "source ~/.zshrc"
-      if: matrix.os == 'macOS-latest'
