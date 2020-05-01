@@ -4,6 +4,9 @@ These are my dotfiles (and a few setup scritps). I was largely inspired by [Mike
 
 My Brewfile is fairly heavy so do be careful and don't just run this blindly. Use it as inspiration and re-write your own.
 
+## How to Install
+TODO!! 
+
 ## Acknowledgements
 Like most dotfiles, they were heavily inspired by the following excellent people!
 
