@@ -5,7 +5,15 @@ These are my dotfiles (and a few setup scritps). I was largely inspired by [Mike
 My Brewfile is fairly heavy so do be careful and don't just run this blindly. Use it as inspiration and re-write your own.
 
 ## How to Install
-TODO!! 
+1. Do the macOS first boot dance and setup your account however you wish. This should be the account you intend on using as your primary one. 
+2. Open Safari and visit https://macos-strap.herokuapp.com/
+3. Open Terminal and run the following commands:
+  ```bash
+  cd Downloads
+  chmod +x strap.sh
+  ./strap.sh
+
+
 
 ## Acknowledgements
 Like most dotfiles, they were heavily inspired by the following excellent people!
@@ -16,7 +24,6 @@ Like most dotfiles, they were heavily inspired by the following excellent people
 
 ## TODO:
 
-- Write up 1Password Script
-- Improve zsh config
 - Write script to update brewfile, and push to Github
 - Test on Ubuntu and Windows WSL
+- Make STP the default browser
