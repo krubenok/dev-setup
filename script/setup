@@ -11,28 +11,15 @@ uname -s | grep -q "_NT-" && export WINDOWS=1
 
 if [ $UNIX ]
 then
-  ln -sfv $DOTFILESDIR/antigen.zsh ~/.antigen.zsh
   ln -sfv $DOTFILESDIR/Brewfile ~/Brewfile
-  ln -sfv $DOTFILESDIR/gitcongif ~/.gitconfig
+  ln -sfv $DOTFILESDIR/gitconfig ~/.gitconfig
   ln -sfv $DOTFILESDIR/gitignore ~/.gitignore
-  ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
   ln -sfv $DOTFILESDIR/hushlogin ~/.hushlogin
   ln -sfv $DOTFILESDIR/iterm2_shell_integration.zsh ~/.iterm2_shell_integration.zsh
-  ln -sfv $DOTFILESDIR/ssh ~/.ssh
   ln -sfv $DOTFILESDIR/zshrc.sh ~/.zshrc
+  ln -sfv $DOTFILESDIR/antigenrc ~/.antigenrc
+  rm -rf ~/.gnupg
+  ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
+  rm -rf ~/.ssh
+  ln -sfv $DOTFILESDIR/ssh ~/.ssh
 fi
-
-
-
-# for DOTFILE in *; do
-#   HOMEFILE="$HOME/.$DOTFILE"
-#   [ -d $DOTFILE ] && DOTFILE="$DOTFILE/"
-#   DIRFILE="$DOTFILESDIR/$DOTFILE"
-
-#   echo $DOTFILE | egrep -q '(^script/$|\.txt$|\.md$|\.alfredpreferences$)' && continue
-
-#   echo $DOTFILE | grep -q '\.sh' &&
-#        HOMEFILE="$HOME/.$(echo $DOTFILE | sed -e 's/\.sh//')"
-
-
-# done

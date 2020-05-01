@@ -1,24 +1,51 @@
-source ~/.antigen.zsh
-    
-# Load the oh-my-zsh's library
-antigen use oh-my-zsh
+source /usr/local/share/antigen/antigen.zsh
 
-antigen bundle <<EOBUNDLES
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    git
+# Load Antigen configurations
+antigen init ~/.antigenrc
 
-    # Syntax highlighting bundle.
-    zsh-users/zsh-syntax-highlighting
+# ===============================
+# ------------Aliases------------
+# ===============================
 
-    # Fish-like auto suggestions
-    zsh-users/zsh-autosuggestions
+# Alias to use the insiders version of VS Code over the default version. 
+alias code="code-insiders"
 
-    # Extra zsh completions
-    zsh-users/zsh-completions
-EOBUNDLES
+# run the previous command with sudo
+alias please='sudo $(fc -ln -1)'
 
-# Load the theme
-antigen theme robbyrussell
+# Show large files
+alias ducks='du -cksh * | sort -rn | head'
 
-# Tell antigen that you're done
-antigen apply
+# alias ls to exa
+alias ls='exa'
+
+# alias to clear DNS cache
+alias flushcache='sudo killall -HUP mDNSResponder'
+
+# ==============================
+# ------------iTerm2------------
+# ==============================
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# =============================
+# ------------nvmrc------------
+# Adds support to automatically detect `.nvmrc` files and switch to the node version specified in
+# them
+# =============================
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
+
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+
+load_nvm () {
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+
+for cmd in "${NODE_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
