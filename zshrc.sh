@@ -1,55 +1,24 @@
-export ZSH="/Users/krubenok/.oh-my-zsh"
+source ~/.antigen.zsh
+    
+# Load the oh-my-zsh's library
+antigen use oh-my-zsh
 
-ZSH_THEME="spaceship"
-
-plugins=(
+antigen bundle <<EOBUNDLES
+    # Bundles from the default repo (robbyrussell's oh-my-zsh)
     git
-    zsh-autosuggestions
-)
 
-source $ZSH/oh-my-zsh.sh
+    # Syntax highlighting bundle.
+    zsh-users/zsh-syntax-highlighting
 
+    # Fish-like auto suggestions
+    zsh-users/zsh-autosuggestions
 
-# Alias to use the insiders version of VS Code over the default version. 
-alias code="code-insiders"
+    # Extra zsh completions
+    zsh-users/zsh-completions
+EOBUNDLES
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# Load the theme
+antigen theme robbyrussell
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# run the previous command with sudo
-alias please='sudo $(fc -ln -1)'
-
-# Show large files
-alias ducks='du -cksh * | sort -rn | head'
-
-# alias ls to exa
-alias ls='exa'
-
-# z support for quick folder navigation
-. `brew --prefix`/etc/profile.d/z.sh
-
-# alias to clear DNS cache
-alias flushcache='sudo killall -HUP mDNSResponder'
-
-# Load nvm into the shell
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Custom script to automatically use the node version specified in the .nvmrc file.
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-
-load_nvm () {
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-}
-
-for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
-
-source "/Users/krubenok/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Tell antigen that you're done
+antigen apply
