@@ -12,6 +12,7 @@ My Brewfile is fairly heavy so do be careful and don't just run this blindly. Us
   cd Downloads
   chmod +x strap.sh
   ./strap.sh
+  ```
 
 
 
@@ -21,9 +22,3 @@ Like most dotfiles, they were heavily inspired by the following excellent people
 - [Mike McQuaid](https://github.com/MikeMcQuaid)
 - [Zell](https://zellwk.com/blog/mac-setup-2/)
 - [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
-
-## TODO:
-
-- Write script to update brewfile, and push to Github
-- Test on Ubuntu and Windows WSL
-- Make STP the default browser
