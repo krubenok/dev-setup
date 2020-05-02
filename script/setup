@@ -16,7 +16,6 @@ then
   ln -sfv $DOTFILESDIR/gitconfig ~/.gitconfig
   ln -sfv $DOTFILESDIR/gitignore ~/.gitignore
   ln -sfv $DOTFILESDIR/hushlogin ~/.hushlogin
-  ln -sfv $DOTFILESDIR/iterm2_shell_integration.zsh ~/.iterm2_shell_integration.zsh
   ln -sfv $DOTFILESDIR/zshrc.sh ~/.zshrc
   rm -rf ~/.gnupg
   ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
