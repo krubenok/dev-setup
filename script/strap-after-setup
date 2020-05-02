@@ -21,4 +21,20 @@ script/node
 if [ $MACOS ]
   then
   script/dock
+  
+  # Check and install any remaining software updates.
+  logn "Checking for software updates:"
+  if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
+    logk
+  else
+    echo
+    log "Installing software updates:"
+    if [ -z "$STRAP_CI" ]; then
+      sudo_askpass softwareupdate --install --all
+      xcode_license
+    else
+      echo "Skipping software updates for CI"
+    fi
+    logk
+  fi
   fi

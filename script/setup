@@ -22,4 +22,5 @@ then
   ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
   rm -rf ~/.ssh
   ln -sfv $DOTFILESDIR/ssh ~/.ssh
+  mkdir ~/Repos
 fi
