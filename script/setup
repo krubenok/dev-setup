@@ -12,12 +12,12 @@ uname -s | grep -q "_NT-" && export WINDOWS=1
 if [ $UNIX ]
 then
   ln -sfv $DOTFILESDIR/Brewfile ~/.Brewfile
+  ln -sfv $DOTFILESDIR/Brewfile.lock.json ~/.Brewfile.lock.json
   ln -sfv $DOTFILESDIR/gitconfig ~/.gitconfig
   ln -sfv $DOTFILESDIR/gitignore ~/.gitignore
   ln -sfv $DOTFILESDIR/hushlogin ~/.hushlogin
   ln -sfv $DOTFILESDIR/iterm2_shell_integration.zsh ~/.iterm2_shell_integration.zsh
   ln -sfv $DOTFILESDIR/zshrc.sh ~/.zshrc
-  ln -sfv $DOTFILESDIR/antigenrc ~/.antigenrc
   rm -rf ~/.gnupg
   ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
   rm -rf ~/.ssh

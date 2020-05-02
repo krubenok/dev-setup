@@ -32,3 +32,7 @@
 	# Use new diff algorithm to make e.g. function diffs look better.
 	compactionheuristic = true
 
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain

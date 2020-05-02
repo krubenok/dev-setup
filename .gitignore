@@ -14,3 +14,5 @@ rbenv/*/
 Brewfile.lock.json
 .DS_Store
 gnupg/pubring.kbx~
+.zsh_history
+z
