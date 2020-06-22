@@ -14,14 +14,12 @@ then
 fi
 
 script/extract-onepassword-secrets
-script/macos
 script/node
 
-# if macOS, set a custom dock
 if [ $MACOS ]
   then
   script/dock
-  
+  script/macos
   # Check and install any remaining software updates.
   logn "Checking for software updates:"
   if softwareupdate -l 2>&1 | grep $Q "No new software available."; then
