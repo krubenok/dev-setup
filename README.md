@@ -17,6 +17,13 @@ My Brewfile is fairly heavy so do be careful and don't just run this blindly. Us
   ./strap.sh
   ```
 
+## Update Brewfile
+
+```bash
+rm /Users/krubenok/.dotfiles/Brewfile
+brew bundle dump --file=/Users/krubenok/.dotfiles/Brewfile
+```
+
 ## Acknowledgements
 
 Like most dotfiles, they were heavily inspired by the following excellent people!
