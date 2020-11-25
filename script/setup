@@ -17,9 +17,10 @@ then
   ln -sfv $DOTFILESDIR/gitignore ~/.gitignore
   ln -sfv $DOTFILESDIR/hushlogin ~/.hushlogin
   ln -sfv $DOTFILESDIR/zshrc.sh ~/.zshrc
+  ln -sfv $DOTFILESDIR/starship.toml ~/.config/starship.toml
   rm -rf ~/.gnupg
   ln -sfv $DOTFILESDIR/gnupg ~/.gnupg
   rm -rf ~/.ssh
   ln -sfv $DOTFILESDIR/ssh ~/.ssh
-  mkdir ~/Repos
+  mkdir ~/Developer
 fi
