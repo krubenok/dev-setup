@@ -1,6 +1,10 @@
-eval "$(starship init zsh)"
+source /usr/local/share/antigen/antigen.zsh
+antigen init ~/.dotfiles/antigenrc
 
-export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+export STARSHIP_CONFIG="/Users/krubenok/.dotfiles/starship.toml"
+export PATH="/usr/local/sbin:$PATH"
+
+eval "$(starship init zsh)"
 
 # ===============================
 # ------------Aliases------------
