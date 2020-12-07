@@ -16,3 +16,4 @@ Brewfile.lock.json
 gnupg/pubring.kbx~
 .zsh_history
 z
+ssh/config
