@@ -10,3 +10,4 @@ ssh_only = true
 format =  "📡  [$hostname](bold red) "
 trim_at = ""
 disabled = false
+
