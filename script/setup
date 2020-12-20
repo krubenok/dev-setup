@@ -23,5 +23,4 @@ then
   rm -rf ~/.ssh
   ln -sfv $DOTFILESDIR/ssh ~/.ssh
   mkdir ~/Developer
-  ln -sfv $DOTFILESDIR/finicky.js ~/.finicky.js
 fi
