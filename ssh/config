@@ -1,0 +1,69 @@
+Host mimi.cs.mcgill.ca
+    Hostname mimi.cs.mcgill.ca
+    User kruben2
+    IdentityFile=~/.ssh/id_rsa
+
+Host pgblitz.rubenok.ca
+    Hostname pgblitz.rubenok.ca
+    User media
+    IdentityFile=~/.ssh/id_rsa  
+
+Host freenas.rubenok.ca
+    Hostname freenas.rubenok.ca
+    User root
+    IdentityFile=~/.ssh/id_rsa
+
+Host hermes.rubenok.ca
+    Hostname hermes.rubenok.ca
+    User admin
+    IdentityFile=~/.ssh/id_rsa
+
+Host root@esxi.rubenok.ca
+    Hostname esxi.rubenok.ca
+    User root
+    IdentityFile=~/.ssh/id_rsa
+
+Host krubenok@esxi.rubenok.ca
+    Hostname esxi.rubenok.ca
+    User krubenok
+    IdentityFile=~/.ssh/id_rsa
+
+Host farnsworth.rubenok.ca
+    Hostname farnsworth.rubenok.ca
+    User krubenok
+    IdentityFile=~/.ssh/id_rsa
+
+Host comp421-group
+    Hostname comp421.cs.mcgill.ca
+    User cs421g55
+    IdentityFile=~/.ssh/id_rsa
+
+Host pritunl
+    Hostname 10.1.1.31
+    User krubenok
+    IdentityFile ~/.ssh/id_rsa
+
+Host pi
+    Hostname 10.1.1.32
+    User kylerubenok
+    IdentityFile ~/.ssh/id_rsa
+
+Host tailscale
+    Hostname 10.1.1.33
+    User krubenok
+    IdentityFile ~/.ssh/id_rs
+
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host *
+	StrictHostKeyChecking ask
+	VerifyHostKeyDNS ask
+	NoHostAuthenticationForLocalhost yes
+	IdentityFile ~/.ssh/id_rsa
+	UseKeychain yes
+	AddKeysToAgent yes
+	ControlMaster auto
+	ControlPath /tmp/ssh-%r@%h:%p.socket
