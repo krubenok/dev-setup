@@ -13,13 +13,13 @@ then
   chsh -s /bin/zsh krubenok
 fi
 
-script/extract-onepassword-secrets
-script/node
+script/extract-onepassword-secrets.sh
+script/node.sh
 
 if [ $MACOS ]
   then
-  script/dock
-  script/macos
+  script/dock.sh
+  script/macos.sh
   # Check and install any remaining software updates.
   logn "Checking for software updates:"
   if softwareupdate -l 2>&1 | grep $Q "No new software available."; then

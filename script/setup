@@ -15,7 +15,6 @@ then
   ln -sfv $DOTFILESDIR/Brewfile.lock.json ~/.Brewfile.lock.json
   ln -sfv $DOTFILESDIR/gitconfig ~/.gitconfig
   ln -sfv $DOTFILESDIR/gitignore ~/.gitignore
-  ln -sfv $DOTFILESDIR/hushlogin ~/.hushlogin
   ln -sfv $DOTFILESDIR/zshrc.sh ~/.zshrc
   ln -sfv $DOTFILESDIR/starship.toml ~/.config/starship.toml
   rm -rf ~/.gnupg
@@ -24,4 +23,5 @@ then
   ln -sfv $DOTFILESDIR/ssh ~/.ssh
   mkdir ~/Developer
   ln -sfv $DOTFILESDIR/finicky.js ~/.finicky.js
+  touch ~/.hushlogin
 fi
