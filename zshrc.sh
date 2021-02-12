@@ -24,9 +24,3 @@ alias ls='exa'
 
 # alias to clear DNS cache
 alias flushcache='sudo killall -HUP mDNSResponder'
-
-# ==============================
-# ------------iTerm2------------
-# ==============================
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

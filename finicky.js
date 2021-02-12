@@ -1,7 +1,7 @@
 // ~/.finicky.js
 
 module.exports = {
-  defaultBrowser: "/Applications/Safari Technology Preview.app",
+  defaultBrowser: "/Applications/Safari.app",
   rewrite: [
     {
       // Redirect all urls to use https
